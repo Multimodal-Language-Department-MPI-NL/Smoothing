@@ -1,0 +1,21 @@
+# environments
+.venv/
+.env
+.Rhistory
+.Rproj.user/
+.RData
+# jupyter
+.ipynb_checkpoints/
+# python
+__pycache__/
+*.pyc
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+# data and results cache
+results/**
+!results/figures/
+data/raw/**
+data/interim/**
+!data/processed/
