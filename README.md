@@ -1,6 +1,6 @@
-# MediaPipe Keypoints Smoothing and Normalization
+# MediaPipe Keypoints Smoothing
 
-A comprehensive pipeline for cleaning, smoothing, and standardizing video-based motion-tracking data, specifically MediaPipe keypoints, for robust gesture analysis and multimodal interaction research.
+A comprehensive pipeline for cleaning and smoothing video-based motion-tracking data, specifically MediaPipe keypoints, for robust gesture analysis and multimodal interaction research.
 
 ## 🔬 Research Context
 
@@ -18,7 +18,17 @@ This project addresses common challenges in motion capture data analysis:
 2. **Smoothing Techniques**: Apply and compare multiple filtering methods to reduce noise while preserving meaningful motion
 3. **Evaluation**: Visually and quantitatively assess smoothing effectiveness by overlaying filtered signals on original data
 
-## 📊 Smoothing Techniques
+## 📊 Smoothing Process
+
+The notebook follows a systematic 5-step approach to smoothing:
+
+1. **Begin with Cleaned Data**: Start with preprocessed data free of missing values and outliers
+2. **Inspect the Data**: Visualize time series plots and video overlays to identify noise patterns
+3. **Select Smoothing Technique**: Choose appropriate filtering method based on data characteristics
+4. **Evaluate Results**: Compare smoothed data against original using visual and quantitative metrics
+5. **Save Processed Data**: Export cleaned and smoothed data for further analysis
+
+## 🔧 Smoothing Techniques
 
 The project implements and compares several filtering methods:
 
@@ -38,7 +48,7 @@ Smoothing/
 ├── environment.yml
 ├── helper_functions.py              # Core MediaPipe extraction functions
 ├── notebooks/
-│   └── 01-L5_Smoothing_and_Normalization_mediapipe.ipynb
+│   └── Smoothing.ipynb
 ├── src/
 │   ├── 5step.png                   # Process diagram
 │   └── Input_Videos/               # Sample input videos
@@ -65,7 +75,7 @@ conda activate smoothing
 
 ```bash
 jupyter lab
-# Open notebooks/01-L5_Smoothing_and_Normalization_mediapipe.ipynb
+# Open notebooks/Smoothing.ipynb
 ```
 
 ### Basic Usage
