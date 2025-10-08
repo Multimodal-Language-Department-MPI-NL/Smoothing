@@ -78,12 +78,6 @@ jupyter lab
 # Open notebooks/Smoothing.ipynb
 ```
 
-### Basic Usage
-
-1. **Place your video** in `src/Input_Videos/` or update the path in the notebook
-2. **Run the extraction** to generate CSV files with MediaPipe keypoints
-3. **Apply smoothing** using various filtering techniques
-4. **Compare results** by viewing overlay videos and analyzing data quality
 
 ## 🔧 Key Functions
 
@@ -158,6 +152,8 @@ This smoothing pipeline is essential for:
 
 ## 📖 References
 
+- **Focus Group Script**: Use the script prepared for the focus group session
+- **Attribution**: Envision Box Module
 - **MediaPipe Documentation**: [https://mediapipe.dev/](https://mediapipe.dev/)
 - **Signal Processing**: Challis, J. H. (2021). *Experimental Methods in Biomechanics*
 - **Gesture Analysis**: McNeill, D. (1992). *Hand and Mind: What Gestures Reveal About Thought*
