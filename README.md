@@ -1,5 +1,7 @@
 # MediaPipe Keypoints Smoothing
 
+> Attribution: Use the script prepared for the focus group session. Attribute to this Envision Box module: [Module](https://www.envisionbox.org/embedded_MergingMultimodal_inPython.html)
+
 A comprehensive pipeline for cleaning and smoothing video-based motion-tracking data, specifically MediaPipe keypoints, for robust gesture analysis and multimodal interaction research.
 
 ## 🔬 Research Context
@@ -14,7 +16,7 @@ This project is part of a larger research framework for analyzing multimodal com
 
 This project addresses common challenges in motion capture data analysis:
 
-1. **Data Extraction & Cleanup**: Load raw MediaPipe CSV files (body, hands, face), remove NaN values, and inspect temporal jitter
+1. **Data Extraction & Cleanup**: Load raw MediaPipe CSV files (body, hands, face), interpolate NaN values (do not drop rows), and inspect temporal jitter
 2. **Smoothing Techniques**: Apply and compare multiple filtering methods to reduce noise while preserving meaningful motion
 3. **Evaluation**: Visually and quantitatively assess smoothing effectiveness by overlaying filtered signals on original data
 
@@ -22,7 +24,7 @@ This project addresses common challenges in motion capture data analysis:
 
 The notebook follows a systematic 5-step approach to smoothing:
 
-1. **Begin with Cleaned Data**: Start with preprocessed data free of missing values and outliers
+1. **Begin with Cleaned Data**: Start with preprocessed data where missing values are addressed via interpolation and outliers are handled
 2. **Inspect the Data**: Visualize time series plots and video overlays to identify noise patterns
 3. **Select Smoothing Technique**: Choose appropriate filtering method based on data characteristics
 4. **Evaluate Results**: Compare smoothed data against original using visual and quantitative metrics

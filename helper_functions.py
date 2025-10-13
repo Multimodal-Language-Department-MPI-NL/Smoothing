@@ -149,7 +149,7 @@ def extract_mediapipe_keypoints_to_csv(video_path, output_dir=None, static_mode=
     
     with mp_holistic.Holistic(
             static_image_mode=static_mode,
-            enable_segmentation=True,
+            enable_segmentation=False,
             refine_face_landmarks=True) as holistic:
         
         while True:
@@ -164,7 +164,8 @@ def extract_mediapipe_keypoints_to_csv(video_path, output_dir=None, static_mode=
             image_rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)
             results = holistic.process(image_rgb)
             
-            if results.segmentation_mask is not None:  # check if there is a pose found
+            # Write detections if pose landmarks are present; otherwise write empty rows
+            if results.pose_landmarks is not None:
                 # Extract landmarks for timeseries
                 samplebody = listpostions(results.pose_landmarks)
                 sampleface = listpostions(results.face_landmarks)
