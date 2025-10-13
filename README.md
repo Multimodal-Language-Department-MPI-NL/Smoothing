@@ -148,9 +148,9 @@ This smoothing pipeline is essential for:
 
 ## 🔗 Related Projects
 
-- **MediaPipe Keypoints Extraction**: [../MediaPipe_keypoints_extraction/](../MediaPipe_keypoints_extraction/)
-- **Gesture Kinematic Analysis**: [../Speed_Acceleration_Jerk/](../Speed_Acceleration_Jerk/)
-- **Gesture Segmentation**: [../Submovements_Holds/](../Submovements_Holds/)
+- **MediaPipe Keypoints Extraction**: [https://github.com/Multimodal-Language-Department-MPI-NL/MediaPipe_keypoints_extraction](https://github.com/Multimodal-Language-Department-MPI-NL/MediaPipe_keypoints_extraction)
+- **Gesture Kinematic Analysis**: [https://github.com/Multimodal-Language-Department-MPI-NL/Speed_Acceleration_Jerk](https://github.com/Multimodal-Language-Department-MPI-NL/Speed_Acceleration_Jerk)
+- **Gesture Segmentation**: [https://github.com/Multimodal-Language-Department-MPI-NL/Submovements_Holds](https://github.com/Multimodal-Language-Department-MPI-NL/Submovements_Holds)
 
 ## 📖 References
 
