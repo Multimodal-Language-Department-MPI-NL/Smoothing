@@ -2,7 +2,7 @@
 
 > Attribution: Use the script prepared for the focus group session. Attribute to this Envision Box module: [Module](https://www.envisionbox.org/embedded_MergingMultimodal_inPython.html)
 
-A comprehensive pipeline for cleaning and smoothing video-based motion-tracking data, specifically MediaPipe keypoints, for robust gesture analysis and multimodal interaction research.
+This module shows how to smooth motion tracking data to handle noise due to tracking inaccuracy and how to interpolate missing data. 
 
 ## 🔬 Research Context
 
@@ -155,7 +155,6 @@ This smoothing pipeline is essential for:
 ## 📖 References
 
 - **Focus Group Script**: Use the script prepared for the focus group session
-- **Attribution**: Envision Box Module
 - **MediaPipe Documentation**: [https://mediapipe.dev/](https://mediapipe.dev/)
 - **Signal Processing**: Challis, J. H. (2021). *Experimental Methods in Biomechanics*
 - **Gesture Analysis**: McNeill, D. (1992). *Hand and Mind: What Gestures Reveal About Thought*
