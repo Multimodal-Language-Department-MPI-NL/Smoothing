@@ -2,7 +2,20 @@
 
 > Attribution: Use the script prepared for the focus group session. Attribute to this Envision Box module: [Module](https://www.envisionbox.org/embedded_MergingMultimodal_inPython.html)
 
-This module shows how to smooth motion tracking data to handle noise due to tracking inaccuracy and how to interpolate missing data. 
+## ⚡ Quick Recommendation
+
+**For most use cases, MediaPipe's built-in smoothing is sufficient and recommended for keypoint data.**
+
+MediaPipe includes sophisticated smoothing using a **Butterworth filter** under the hood when `static_image_mode=False` (the default setting). This provides excellent results for smoothing raw keypoint trajectories without additional post-processing.
+
+**Use this module's signal processing pipeline when:**
+- You need to smooth **derivatives** (1st, 2nd, 3rd derivatives: speed, acceleration, jerk)
+- You want fine-grained control over smoothing parameters
+- You're comparing different smoothing techniques for research purposes
+
+---
+
+This module shows how to smooth motion tracking data to handle noise due to tracking inaccuracy and how to interpolate missing data using various signal processing techniques. 
 
 ## 🔬 Research Context
 
@@ -34,10 +47,10 @@ The notebook follows a systematic 5-step approach to smoothing:
 
 The project implements and compares several filtering methods:
 
-- **Zero-Phase Low-Pass Butterworth Filter**: Forward-backward application (`filtfilt`) for effective noise reduction without phase distortion
+- **MediaPipe Built-in Smoothing (Recommended)**: MediaPipe's native Butterworth filter smoothing when `static_image_mode=False` - **this is sufficient for most keypoint smoothing needs**
+- **Zero-Phase Low-Pass Butterworth Filter**: Forward-backward application (`filtfilt`) for effective noise reduction without phase distortion - **useful for smoothing derivatives (speed, acceleration, jerk)**
 - **Savitzky-Golay Filter**: Polynomial smoothing over a moving window to preserve higher-order moments
 - **Gaussian Neighbor-Averaging**: Weighted moving average using a Gaussian kernel
-- **MediaPipe Built-in Smoothing**: Exploration of MediaPipe's native smoothing when `static_image_mode=False`
 - **Custom Smoothing**: Flexible custom functions for specific research needs
 
 ## 📁 Project Structure
@@ -166,3 +179,8 @@ This project is part of the MPI Multimodal Interaction Research framework. For q
 ## 📄 License
 
 This project is part of the MPI research framework. Please refer to the main project license for usage terms.
+
+## 📓 Notebooks
+
+- `notebooks/Smoothing_Quick.ipynb` — Minimal pipeline using MediaPipe’s built‑in smoothing (`static_image_mode=False`). Produces smoothed keypoint CSVs quickly. If you only need smoothed positions, start here. See also `notebooks/Smoothing.ipynb` for advanced options.
+- `notebooks/Smoothing.ipynb` — Full signal‑processing suite (Butterworth, Savitzky–Golay, Gaussian) with evaluation. Use when you need to smooth derivatives (speed, acceleration, jerk) or compare methods. For a faster alternative, see `notebooks/Smoothing_Quick.ipynb`.
