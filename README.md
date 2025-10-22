@@ -21,7 +21,11 @@ MediaPipe includes sophisticated smoothing using a **Butterworth filter** under 
 
 > Example visualization of raw vs. smoothed trajectories (Butterworth/Savitzky–Golay/Gaussian).
 
-Download/preview the keypoint overlay video: `src/Keypoint_video.mov`
+Keypoint overlay (gesture):
+
+<video src="src/Keypoint_video.mov" controls width="640">
+  Your browser does not support embedded video. You can download/view the file directly: src/Keypoint_video.mov
+</video>
 
 ---
 
