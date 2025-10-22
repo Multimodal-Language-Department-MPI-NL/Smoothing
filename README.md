@@ -23,7 +23,7 @@ MediaPipe includes sophisticated smoothing using a **Butterworth filter** under 
 
 Keypoint overlay (gesture):
 
-<video src="src/Keypoint_video.mov" controls width="640">
+<video src="src/Keypoint_video.mp4" controls width="640">
   Your browser does not support embedded video. You can download/view the file directly: src/Keypoint_video.mov
 </video>
 
